@@ -18,7 +18,7 @@ let s = WebClient(url).with(postContent: params).with(timeoutSeconds: 10).with(r
 // SimpleXML
 It's not simple works with xml, the simplexml allow you use fake basic xpath expression
 
-let xmlFragment = "<response status=\"ok\"><details><title>Good work</title></details></response>"
+let xmlFragment = "<response status=\"ok\"><details1><title>Good work</title></details1></response>"
 
 let xml = SimpleXML(xmlFragment)
 
