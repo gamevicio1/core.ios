@@ -18,13 +18,13 @@ let s = WebClient(url).with(postContent: params).with(timeoutSeconds: 10).with(r
 // SimpleXML
 It's not simple works with xml, the simplexml allow you use fake basic xpath expression
 
-let xmlFragment = "<response status=\"ok\"><details1><title>Good work</title></details1></response>"
+let xmlFragment = "<response status=\"ok\"><body><title>Good work</title></body></response>"
 
 let xml = SimpleXML(xmlFragment)
 
 let status = xml.getString("attribute::status")
-let title = xml.getString("details/title")
-let numberOfTitles = xml.count("details/title")
+let title = xml.getString("body/title")
+let numberOfTitles = xml.count("body/title")
 
 Others classes include:
  - Database sqlite support
